@@ -28,14 +28,12 @@
                     <li><a href="#">Sneakers</a></li>
                     <li><a href="#">Players</a></li>
                 </ul>
-
-                
-
             </nav>
-
-            <svg class="close" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="menu" viewBox="0 0 48 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M24 32H0V26.6667H24V32ZM48 18.6667H0V13.3333H48V18.6667ZM48 5.33333H24V0H48V5.33333Z" fill="white" />
             </svg>
+
+
         </header>
 
         <section class="hero">
@@ -75,5 +73,18 @@
 
         </section>
     </div>
+
+    <script>
+        const menu = document.querySelector('.menu')
+        const close = document.querySelector('.close')
+        const nav = document.querySelector('nav')
+
+        menu.addEventListener('click', () => {
+            nav.classList.add('open-nav')
+        })
+        close.addEventListener('click', () => {
+            nav.classList.remove('open-nav')
+        })
+    </script>
 </body>
 </html>
